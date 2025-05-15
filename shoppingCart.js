@@ -1,22 +1,29 @@
-// Exporting module
-console.log('Exporting module');
+// // Exporting module
+// console.log('Exporting module');
 
-const shippingCost = 10;
-export const cart = [];
+// // // Blocking code
+// // console.log('Start fetching users');
+// // // This top level fetch is not only blocking in this module but also in de module that is importing it
+// // await fetch('https://jsonplaceholder.typicode.com/users');
+// // // only after this fetching is done, this console.log will be executed
+// // console.log('FINISH fetching users');
 
-// exports have to be on top level code so outside from any (if-block, variable, function...), otherwise its not work
-export const addToCart = function (product, quantity) {
-  cart.push({ product, quantity });
-  console.log(`${quantity} ${product} added to cart`);
-};
+// const shippingCost = 10;
+// export const cart = [];
 
-const totalPrice = 237;
-const totalQuantity = 23;
+// // exports have to be on top level code so outside from any (if-block, variable, function...), otherwise its not work
+// export const addToCart = function (product, quantity) {
+//   cart.push({ product, quantity });
+//   console.log(`${quantity} ${product} added to cart`);
+// };
 
-export { totalPrice, totalQuantity as tq };
+// const totalPrice = 237;
+// const totalQuantity = 23;
 
-// The default export
-export default function (product, quantity) {
-  cart.push({ product, quantity });
-  console.log(`${quantity} ${product} added to cart`);
-}
+// export { totalPrice, totalQuantity as tq };
+
+// // The default export
+// export default function (product, quantity) {
+//   cart.push({ product, quantity });
+//   console.log(`${quantity} ${product} added to cart`);
+// }
