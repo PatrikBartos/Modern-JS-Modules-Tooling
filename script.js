@@ -99,3 +99,20 @@
 
 // // Import
 // const {addToCart} = require("./shoppingCart.js")
+
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+// The Command Line
+
+// "dir" zeigt alle Datein im aktuellen Ordner an
+// "cd .." Nach oben steigen im Dateibaum
+// "cd ../.." um 2 lvl nach oben zu steigen
+// "cd (Name von Ordner)" kann man in andere Ordner
+// "clear" Terminal leeren
+
+// "mkdir (Name)" erstellen eines neuen Ordners
+// "rmdir (Name)" loscht Ordner
+// "New-Item (Datei Name)" erstellt neue Datei im Ordner
+// "del (Name)" um Datei zu loschen
+// "ni (Datei Name)" erstellt neue Datei im Ordner
+// "mv (Name) (wohin z.b ../)" verschiebt Datei in Eltern Ordner
