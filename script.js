@@ -116,3 +116,33 @@
 // "del (Name)" um Datei zu loschen
 // "ni (Datei Name)" erstellt neue Datei im Ordner
 // "mv (Name) (wohin z.b ../)" verschiebt Datei in Eltern Ordner
+
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+// Introduction to NPM
+
+// // Importieren der CloneDeep function von lodash-es
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+
+// // Erstellen eines sehr verschachtelten Objekt
+// const state = {
+//   cart: [
+//     { product: 'bread', quantity: 5 },
+//     { product: 'pizza', quantity: 5 },
+//   ],
+//   user: { loggedIn: true },
+// };
+
+// // Object kopiert mit JavaScript
+// const stateClone = Object.assign(({}, state));
+// // Object kopiert mit cloneDeep
+// const stateDeepClone = cloneDeep(state);
+
+// // Wenn wir z.b state.user.loggedIn auf false setzen, wird es im clone mit cloneDeep nicht uebernommen
+// state.user.loggedIn = false;
+// console.log(stateClone);
+
+// console.log(stateDeepClone);
+
+// // Mit "npm i (Name)" kannst du z.b leaflet oder lodash libarys installieren.
+// // loscht du dann deine node_modules Ordner, dann kannst du mit "npm i" in der Konsole einfach alle wieder instalieren lassen.
