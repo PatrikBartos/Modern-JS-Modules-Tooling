@@ -1,31 +1,31 @@
-// // Importing module
-// // import {
-// //   addToCart,
-// //   totalPrice as price,
-// //   // with as you can rename
-// //   tq,
-// // } from './shoppingCart.js';
-// // addToCart('bread', 5);
-// // console.log(price, tq);
+// Importing module
+// import {
+//   addToCart,
+//   totalPrice as price,
+//   // with as you can rename
+//   tq,
+// } from './shoppingCart.js';
+// addToCart('bread', 5);
+// console.log(price, tq);
 
-// // console.log(shippingCost);
-// // Don't work because variables in the top scope in the modules are private so they can not be access from outside. You can just use it in the module, where they are created
+// console.log(shippingCost);
+// Don't work because variables in the top scope in the modules are private so they can not be access from outside. You can just use it in the module, where they are created
 
-// ///////////////////////////////////////////////////////////
-// // console.log('importing module');
-// // import * as ShoppingCart from './shoppingCart.js';
-// // // ShoppingCart create an object which receives all the exported data from the module
-// // ShoppingCart.addToCart('bread', 5);
-// // console.log(ShoppingCart.totalPrice);
+///////////////////////////////////////////////////////////
+// console.log('importing module');
+// import * as ShoppingCart from './shoppingCart.js';
+// // ShoppingCart create an object which receives all the exported data from the module
+// ShoppingCart.addToCart('bread', 5);
+// console.log(ShoppingCart.totalPrice);
 
-// // importing the default export and call it add
-// // Mixed import of default export and named export
-// import add, { cart } from './shoppingCart.js';
-// add('pizza', 2);
-// add('bread', 5);
-// add('apples', 4);
+// importing the default export and call it add
+// Mixed import of default export and named export
+import add, { cart } from './shoppingCart.js';
+add('pizza', 2);
+add('bread', 5);
+add('apples', 4);
 
-// console.log(cart);
+console.log(cart);
 
 ///////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -144,5 +144,34 @@
 
 // console.log(stateDeepClone);
 
+// npm init
+
 // // Mit "npm i (Name)" kannst du z.b leaflet oder lodash libarys installieren.
 // // loscht du dann deine node_modules Ordner, dann kannst du mit "npm i" in der Konsole einfach alle wieder instalieren lassen.
+
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+// Bundling with parcel and NPM Scripts
+
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
+
+const state = {
+  cart: [
+    { product: 'bread', quantity: 5 },
+    { product: 'pizza', quantity: 5 },
+  ],
+  user: { loggedIn: true },
+};
+
+const stateClone = Object.assign(({}, state));
+const stateDeepClone = cloneDeep(state);
+
+state.user.loggedIn = false;
+console.log(stateClone);
+
+console.log(stateDeepClone);
+
+if (module.hot) {
+  module.hot.accept();
+}
